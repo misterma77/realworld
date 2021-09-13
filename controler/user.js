@@ -11,8 +11,10 @@ export const login = (req, res, next) => {
 // 注册
 export const register = async (req, res, next) => {
     try {
-        const user = new User(req.body)
+        let user = new User(req.body)
         await user.save()
+        user = user.toJSON()
+        delete user.password
         res.json(user)
     } catch (err) {
         next(err)

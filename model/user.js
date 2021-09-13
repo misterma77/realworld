@@ -1,5 +1,6 @@
 import mongoose from 'mongoose'
 import baseModel from './baseModel.js'
+import md5 from '../utils/md5.js'
 export default new mongoose.Schema({
     username: {
         type: String,
@@ -7,7 +8,9 @@ export default new mongoose.Schema({
     },
     password: {
         type: String,
-        required: true
+        required: true,
+        set: val => md5(val),
+        select: false
     },
     email: {
         type: String,
