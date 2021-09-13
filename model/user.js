@@ -3,11 +3,15 @@ import baseModel from './baseModel.js'
 export default new mongoose.Schema({
     username: {
         type: String,
-        request: true
+        required: true
     },
     password: {
         type: String,
-        require: true
+        required: true
+    },
+    email: {
+        type: String,
+        required: true
     },
     image: {
         type: String,

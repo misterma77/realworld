@@ -1,0 +1,9 @@
+
+POST http://localhost:3000/api/user/register HTTP/1.1
+content-type: application/json
+
+{
+    "username": "ma11",
+    "password": "1111",
+    "email": "11@qq.com"
+}
