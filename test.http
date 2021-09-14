@@ -1,9 +1,34 @@
+@hostname = http://localhost
+@port = 3000
+@host = {{hostname}}:{{port}}/api
+@contentType = application/json
+@createdAt = {{$datetime iso8601}}
 
-POST http://localhost:3000/api/user/register HTTP/1.1
-content-type: application/json
+
+### 注册
+POST {{host}}/user/register 
+content-type: {{contentType}}
 
 {
-    "username": "ma11",
-    "password": "1111",
-    "email": "11@qq.com"
+    "username": "1",
+    "password": "1",
+    "email": "1@qq.com"
+}
+### 登录
+POST {{host}}/user/login 
+content-type: application/json
+token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTQwOWFhZjkyZTdiMjcyZTI5NWRmMTYiLCJpYXQiOjE2MzE2Mjg1NTZ9.SElJx02iB_jfmCvOedbMa3GwlQPMt26oufSVt8tmw54
+
+{
+
+    "password": "1",
+    "email": "1@qq.com"
+}
+### 获取用户信息
+POST {{host}}/user/ 
+content-type: application/json
+token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTQwOWFhZjkyZTdiMjcyZTI5NWRmMTYiLCJpYXQiOjE2MzE2Mjg1NTZ9.SElJx02iB_jfmCvOedbMa3GwlQPMt26oufSVt8tmw54
+
+{
+
 }
