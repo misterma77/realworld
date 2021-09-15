@@ -9,7 +9,6 @@ export default async (req, res, next) => {
     try {
         const decoded2token = await verify(token, jwtSecret)
         req.user = await User.findById(decoded2token.userId)
-        console.log(req.user);
         next()
     } catch (error) {
         res.status(400).end()

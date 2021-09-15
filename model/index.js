@@ -1,5 +1,6 @@
 import mongoose from 'mongoose'
 import userSchema from './user.js'
+import articleSchema from './article.js'
 mongoose.connect('mongodb://localhost/realworld');
 
 const db = mongoose.connection
@@ -14,6 +15,7 @@ db.on('open', () => {
 // export const User = mongoose.model("User", userSchema)
 
 export const User = mongoose.model("User", userSchema)
+export const Article = mongoose.model("Article", articleSchema)
 
 
 

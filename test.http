@@ -32,3 +32,15 @@ token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTQwOWFhZjkyZTdiMjcyZ
 {
 
 }
+
+### 创建文章
+POST {{host}}/article 
+content-type: application/json
+token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTQwOWFhZjkyZTdiMjcyZTI5NWRmMTYiLCJpYXQiOjE2MzE2Mjg1NTZ9.SElJx02iB_jfmCvOedbMa3GwlQPMt26oufSVt8tmw54
+
+{
+  "title": "How to train your dragon",
+    "description": "Ever wonder how?",
+    "body": "You have to believe",
+    "tagList": ["reactjs", "angularjs", "dragons"]
+}
